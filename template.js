@@ -17,6 +17,8 @@ class BlankTemplate {
                     if (!className.startsWith("language-")) return;
                     let name = className.slice(9);
 
+                    this.components ??= {};
+
                     for (let { listener, params } of this.components[name] ??
                         []) {
                         dom.window.document
